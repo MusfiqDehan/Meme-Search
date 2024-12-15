@@ -22,9 +22,11 @@ class MemeSearchEngine:
             # Configure Gemini API
             api_key = os.getenv("GEMINI_API_KEY")
             if not api_key:
-                raise ValueError(
-                    "No API key found. Please set GEMINI_API_KEY in .env file"
-                )
+                api_key = input("Please enter your GEMINI_API_KEY: ")
+                if not api_key:
+                    raise ValueError(
+                        "No API key provided. Please set GEMINI_API_KEY in .env file or enter it at runtime."
+                    )
 
             genai.configure(api_key=api_key)
 
@@ -164,7 +166,7 @@ class MemeSearchEngine:
         """
         Interactive loop for searching meme images
         """
-        print("Advanced Meme Image Search Engine")
+        print("\n🤖 Meme Image Search Engine 🤖")
         print(f"Loaded {len(self.meme_images)} meme images")
         print("Enter 'exit' to quit the search")
 
@@ -174,7 +176,7 @@ class MemeSearchEngine:
 
             # Check for exit condition
             if search_query.lower() == "exit":
-                print("Exiting Meme Search Engine. Goodbye! 👋")
+                print("Exiting Meme Search Engine...")
                 break
 
             # Validate input
