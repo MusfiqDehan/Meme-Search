@@ -16,11 +16,18 @@ cd fringecore-machine-learning-challenge-meme-search
 ```bash
 python3 -m venv .venv
 ```
-4. Install the required packages inside virtual env using
+4. Activate the virtual environment using
+```bash
+source .venv/bin/activate
+```
+5. Create a .env file and Add the Gemini API key to the .env file by following the format in the .env.example file
+
+
+6. Install the required packages inside virtual env using
 ```bash
 pip3 install -r requirements.txt
 ```
-5. Run the application using
+7. Run the application using
 ```bash
 python3 meme_search.py
 ```
