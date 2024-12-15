@@ -6,11 +6,11 @@ A Meme Search Engine that allows users to search for memes by keywords. The sear
 
 1. Clone the repository
 ```bash
-git clone git@github.com:MusfiqDehan/Meme-Search.git
+ git clone ssh://submission.fringecore.sh/5P8Gjb/fringecore-machine-learning-challenge-meme-search
 ```
 2. Change the directory to the repository
 ```bash
-cd Meme-Search
+cd fringecore-machine-learning-challenge-meme-search
 ```
 3. Set up a virtual environment using
 ```bash
